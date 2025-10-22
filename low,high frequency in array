@@ -1,0 +1,47 @@
+package thriveni;
+
+import java.util.Scanner;
+public class A {
+	public static void main(String[] args) {
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("enter a value:");
+		 int a=sc.nextInt();
+		 int count=1;
+		 int ele1=0,ele2=0;
+		 int min=0,max=0;
+		 int[] arr=new int[a];
+		 for(int i=0;i<a;i++) {
+			 arr[i]=sc.nextInt();
+			 if(arr[i]>min) {
+				 min=arr[i];
+				 }
+			 }
+		 Boolean v[]=new Boolean[a];
+		 for(int i=0;i<a;i++) {
+			 v[i]=false;}
+		 max=1;
+		 for(int i=0;i<a-1;i++) {
+			 if(v[i]==true) {
+				 continue;
+			 }
+			for(int j=i+1;j<a;j++) {
+				if(arr[i]==arr[j]) {
+				v[j]=true;
+				count++;
+				}}
+				if(count>max) {
+				max=count;
+				ele1=arr[i];
+				}
+				if(count<min) {
+				min=count;
+				ele2=arr[i];
+				}
+			
+			 
+			count=1;
+			 }
+		    System.out.println(ele1+"no of tymes:"+max);
+			System.out.println(ele2+"no of tymes:"+min);
+		 }
+}

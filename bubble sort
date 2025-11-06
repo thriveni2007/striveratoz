@@ -1,0 +1,25 @@
+package thriveni;
+import java.util.*;
+//bubble sort
+public class Linkedlist1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int a[]=new int[] {10,7,3,2,6};
+      int temp;
+      for(int i=n-1;i>0;i--) {
+      for(int j=0;j<n-1;j++){
+    	  if(a[j]>a[j+1]) {
+    		  temp=a[j];
+    		  a[j]=a[j+1];
+    		  a[j+1]=temp;
+    	  }
+      }}
+      for(int k=0;k<n;k++) {
+      System.out.print(a[k]);}
+ 
+	}
+
+}
